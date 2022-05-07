@@ -62,3 +62,26 @@ header .overlay {
 .navbarNonTransparent{
     background-color: rgba(7, 21, 38, 1);
 }
+
+/*Underline animation*/
+
+.underline {
+    position: relative;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: #F0F7D4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.underline:hover::before {
+    transform: scaleX(1);
+}

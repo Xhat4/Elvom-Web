@@ -13,11 +13,11 @@
             <header>
 
                 <!-- navbar -->
-                <div class="navbar w-100 fixed-top text-center text-white navbarSemiTransparent">
+                <div class="navbar w-100 fixed-top text-center navbarSemiTransparent">
                     <a class="nav-link text-white">example</a>
                     <div class="d-flex flex-nowrap">
-                        <a class="nav-link text-white">example</a>
-                        <a class="nav-link text-white">example2</a>
+                        <a class="nav-link text-white underline">example</a>
+                        <a class="nav-link text-white underline">example2</a>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@
                 <!-- The header content -->
                 <div class="container h-100">
                     <div class="d-flex h-100 text-center align-items-center">
-                        <div class="w-100 text-white">
+                        <div class="w-100">
                             <h1 class="display-3">Video Header</h1>
                             <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
                         </div>
@@ -57,6 +57,16 @@
             </section>-->
         </article>
         <article>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
+            <p>a</p>
             <p>a</p>
             <p>a</p>
             <p>a</p>
