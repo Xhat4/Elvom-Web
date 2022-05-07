@@ -4,22 +4,51 @@
     <head>
         <meta charset="utf-8">
         <title>Elvom</title>
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/style.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <article>
-            <header>
-
-                <!-- navbar -->
-                <div class="navbar w-100 fixed-top text-center navbarSemiTransparent">
-                    <a class="nav-link text-white">example</a>
-                    <div class="d-flex flex-nowrap">
-                        <a class="nav-link text-white underline">example</a>
-                        <a class="nav-link text-white underline">example2</a>
+        <!-- navbar -->
+        <nav class="navbar2 w-100 fixed-top text-center navbarSemiTransparent">
+            <div class="logoNavbar">
+                <img class="logoNavbarImg" src="images/ElvomLogo.png"/>
+            </div>
+            <div class="d-flex flex-nowrap">
+                <a class="nav-link text-white underline btn">Galería</a>
+                <div>
+                    <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
                     </div>
                 </div>
+            </div>
+        </nav>
+        <article>
+            <header>
 
                 <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
                 <div class="overlay"></div>
@@ -89,7 +118,5 @@
             <p>a</p>
         </article>
         <article></article>
-        <script src="js/main.js" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>

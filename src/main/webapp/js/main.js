@@ -1,18 +1,18 @@
-jQuery(function($) {
+$(document).ready(function() {
     var altura = 0;
 
     $(window).on('scroll', function() {
 
         if ($(this).scrollTop() < altura || $(this).scrollTop() < 200) {
-            $('.navbar').addClass('fixed-top');
+            $('.navbar2').addClass('fixed-top');
         } else{
-            $('.navbar').removeClass('fixed-top');
+            $('.navbar2').removeClass('fixed-top');
         }
 
         if($(this).scrollTop() > 543){
-            $('.navbar').addClass('navbarNonTransparent');
+            $('.navbar2').addClass('navbarNonTransparent');
         }else{
-            $('.navbar').removeClass('navbarNonTransparent');
+            $('.navbar2').removeClass('navbarNonTransparent');
         }
 
         altura = $(this).scrollTop();
@@ -22,4 +22,5 @@ jQuery(function($) {
     /*$(window).on('resize', adjustNav);
 
     adjustNav();*/
+
 });

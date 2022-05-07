@@ -54,6 +54,29 @@ header .overlay {
 }
 
 /*For navbar*/
+.navbar2{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar2 > ul > li {
+    position: relative;
+    white-space: nowrap;
+    margin: 0 12px;
+}
+
+.logoNavbar{
+    padding: 5px 20px;
+}
+
+.logoNavbarImg{
+    width: 45px;
+    height: 55px;
+    margin: 0.5rem 1rem;
+}
 
 .navbarSemiTransparent{
     background-color: rgba(7, 21, 38, 0.25);
