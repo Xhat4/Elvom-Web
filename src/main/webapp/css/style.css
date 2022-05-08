@@ -74,6 +74,7 @@ header .overlay {
 .navbarSemiTransparent{
     background-color: rgba(7, 21, 38, 0.25);
     opacity: 1;
+    transition: background-color 1000ms;
 }
 .navbarTransparent{
     background-color: rgb(7, 21, 38);
@@ -113,6 +114,7 @@ header .overlay {
 
 .dropdown-menu{
     background-color: rgba(7, 21, 38, 0.25);
+    transition: background-color 1000ms;
 }
 
 .dropdown-menuTransparent{
