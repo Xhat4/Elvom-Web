@@ -55,17 +55,10 @@ header .overlay {
 
 /*For navbar*/
 .navbar2{
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-}
-
-.navbar2 > ul > li {
-    position: relative;
-    white-space: nowrap;
-    margin: 0 12px;
 }
 
 .logoNavbar{
@@ -80,10 +73,17 @@ header .overlay {
 
 .navbarSemiTransparent{
     background-color: rgba(7, 21, 38, 0.25);
+    opacity: 1;
+}
+.navbarTransparent{
+    background-color: rgb(7, 21, 38);
+    opacity: 0;
 }
 
 .navbarNonTransparent{
-    background-color: rgba(7, 21, 38, 1);
+    background-color: rgb(7, 21, 38);
+    opacity: 1;
+    transition: opacity 100ms;
 }
 
 /*Underline animation*/
@@ -107,4 +107,26 @@ header .overlay {
 
 .underline:hover::before {
     transform: scaleX(1);
+}
+
+/*DropDown Menu*/
+
+.dropdown-menu{
+    background-color: rgba(7, 21, 38, 0.25);
+}
+
+.dropdown-menuTransparent{
+    background-color: rgba(7, 21, 38, 0);
+}
+
+.dropdown-menuNonTransparent{
+    background-color: rgb(7, 21, 38);
+}
+
+/*Body*/
+
+.realBody{
+    position: relative;
+    z-index: 1040;
+    background-color: red;
 }
