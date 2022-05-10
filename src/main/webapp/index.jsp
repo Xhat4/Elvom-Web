@@ -39,12 +39,12 @@
                                 </div>
                             </div>-->
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button type="submit" class="btn blue-button">Sign in</button>
                             </div>
                         </form>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">New around here? Sign up</a>
-                        <a class="dropdown-item" href="#">Forgot password?</a>
+                        <a class="text-center text-white text-decoration-none d-block" href="#">New around here? Sign up</a>
+                        <a class="text-center text-white text-decoration-none d-block" href="#">Forgot password?</a>
                     </div>
                 </div>
             </div>

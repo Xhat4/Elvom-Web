@@ -132,3 +132,17 @@ header .overlay {
     z-index: 1040;
     background-color: red;
 }
+
+/*Login*/
+
+.blue-button{
+    background-color: transparent;
+    color: white;
+    border-color: #347B98;
+}
+
+.blue-button:hover{
+    background-color: #347B98;
+    color: white;
+    border-color: #347B98;
+}
