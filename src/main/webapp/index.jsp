@@ -4,31 +4,36 @@
     <head>
         <meta charset="utf-8">
         <title>Elvom</title>
+        <link rel="icon" type="image/x-icon" href="./images/Logo.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/style.css"/>
     </head>
     <body>
         <!-- navbar -->
         <nav class="navbar2 w-100 fixed-top text-center navbarSemiTransparent">
             <div class="logoNavbar">
-                <img class="logoNavbarImg" src="images/ElvomLogo.png"/>
+                <a href="#">
+                    <img class="logoNavbarImg" src="images/ElvomLogo.png"/>
+                </a>
             </div>
             <div class="d-flex flex-nowrap">
                 <a class="nav-link text-white underline btn">Galería</a>
+                <a class="nav-link text-white underline btn">Artistas</a>
                 <div>
                     <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
                     <div class="dropdown-menu rounded mt-3">
                         <form class="px-2 py-1">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput">Email address</label>
+                                <input type="text" class="form-control" id="username" placeholder="username" required>
+                                <label for="username">Nombre de Usuario</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                <label for="floatingPassword">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                <label for="password">Contraseña</label>
                             </div>
                             <!--<div class="mb-3">
                                 <div class="form-check">
@@ -39,12 +44,12 @@
                                 </div>
                             </div>-->
                             <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn blue-button">Sign in</button>
+                                <button type="submit" class="btn blue-button">Login</button>
                             </div>
                         </form>
                         <div class="dropdown-divider"></div>
-                        <a class="text-center text-white text-decoration-none d-block" href="#">New around here? Sign up</a>
-                        <a class="text-center text-white text-decoration-none d-block" href="#">Forgot password?</a>
+                        <a class="text-center text-white text-decoration-none d-block" href="./views/Register.jsp">Registrarse</a>
+                        <!--<a class="text-center text-white text-decoration-none d-block" href="#">Forgot password?</a>-->
                     </div>
                 </div>
             </div>
@@ -57,15 +62,15 @@
 
                 <!-- The HTML5 video element that will create the background video on the header -->
                 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                    <source src="https://firebasestorage.googleapis.com/v0/b/elvom-web.appspot.com/o/fondo.mp4?alt=media&token=9226d75e-b426-49f0-bc2b-f74c40032cf0" type="video/mp4">
+                    <!--<source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">-->
                 </video>
 
                 <!-- The header content -->
-                <div class="container h-100">
+                <div class="container h-100" id="measureHead">
                     <div class="d-flex h-100 text-center align-items-center">
                         <div class="w-100">
-                            <h1 class="display-3">Video Header</h1>
-                            <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
+                            <img class="display-3" src="./images/logo+namewhite.png" width="250px" height="250px"></img>
                         </div>
                     </div>
                 </div>
@@ -87,38 +92,90 @@
                 </div>
             </section>-->
         </div>
-        <div class="realBody">
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-        </div>
-        <article></article>
+        <article class="py-5 px-5 realBody">
+            <div id="aboutUs" class="my-5 p-2">
+                <a class="ms-5 subtitles h1">Acerca de Elvom</a>
+                <div class="ms-5 mt-3">
+                    <p>Se trata de una organización que busca dar seguridad y valorar el arte tecnológico ya sean vídeos, diseños, animaciones, música... </p>
+                </div>
+            </div>
+            <div id="Information" class="p-2">
+                <a class="ms-5 subtitles h1">Tipo de arte</a>
+                <div class="ms-5 mt-5 row">
+                    <div class="col-6 d-flex align-items-center">
+                        <div class="px-5">
+                            <h4>Imágenes</h4>
+                            <p class="mt-2">Desde Elvom pensamos que este formato es imprescindible. En el pasado existía sobre lienzos o papel, sin embargo, en
+                                la actualidad es fácil encontrarlo en formato digital manteniendo sus principales estilos (óleos, vectorial, abstracto, realista, etc).</p>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="./images/Images.png" class="rounded-3 mx-auto" width="350px" height="225px">
+                    </div>
+                </div>
+                <div class="ms-5 mt-5 row">
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="./images/Images.png" class="rounded-3 mx-auto" width="350px" height="225px">
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <div class="px-5">
+                            <h4>Vídeos</h4>
+                            <p class="mt-2">Si una imagen debe de ser considerada arte, ¿por qué no un conjunto de ellas?.
+                            Los vídeos pueden transmitir los mismos sentimientos que las imágenes solo que con la particularidad de que dichos sentimientos
+                            pueden cambiar con el paso de la visualización del mismo, algo que con las imágenes es algo muy difícil de conseguir</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-5 mt-5 row">
+                    <div class="col-6 d-flex align-items-center">
+                        <div class="px-5">
+                            <h4>Imágenes2</h4>
+                            <p class="mt-2">Desde Elvom pensamos que este formato es imprescindible. En el pasado existía sobre lienzos o papel, sin embargo, en
+                                la actualidad es fácil encontrarlo en formato digital manteniendo sus principales estilos (óleos, vectorial, abstracto, realista, etc).</p>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="./images/Images.png" class="rounded-3 mx-auto" width="350px" height="225px">
+                    </div>
+                </div>
+                <div class="ms-5 mt-5 row">
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="./images/Images.png" class="rounded-3 mx-auto" width="350px" height="225px">
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <div class="px-5">
+                            <h4>Vídeos2</h4>
+                            <p class="mt-2">Si una imagen debe de ser considerada arte, ¿por qué no un conjunto de ellas?.
+                                Los vídeos pueden transmitir los mismos sentimientos que las imágenes solo que con la particularidad de que dichos sentimientos
+                                pueden cambiar con el paso de la visualización del mismo, algo que con las imágenes es algo muy difícil de conseguir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center pt-5">
+                    <div class="col-md-12 text-center">
+                        <p class="menu">
+                            <a href="#">Términos y condiciones</a>
+                            <a href="#">Únete</a>
+                        </p>
+                        <ul class="p-0">
+                            <li>
+                                <a href="https://twitter.com/Elvom_"><i class="fa fa-twitter-square"></i></a>
+                                <a href="https://www.instagram.com/elv0m/"><i class="fa fa-instagram-square"></i></a>
+                                <a href="https://discord.gg/Y7xsGFVwdQ"><i class="fa fa-discord"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3 justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <p>Copyright © Elvom 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

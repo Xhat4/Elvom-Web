@@ -39,6 +39,11 @@ header .overlay {
     z-index: 1;
 }
 
+.nonHeader{
+    height: 75px;
+    background-color: #F0F7D4;
+}
+
 /* Media Query for devices within coarse pointers and no hover functionality */
 
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
@@ -55,6 +60,13 @@ header .overlay {
 
 /*For navbar*/
 .navbar2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar3{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -130,7 +142,7 @@ header .overlay {
 .realBody{
     position: relative;
     z-index: 1040;
-    background-color: red;
+    background-color: #F0F7D4;
 }
 
 /*Login*/
@@ -145,4 +157,118 @@ header .overlay {
     background-color: #347B98;
     color: white;
     border-color: #347B98;
+}
+
+/*about us*/
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+#aboutUs:hover > .subtitles::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.subtitles {
+    position: relative;
+}
+
+.subtitles::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #347B98;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/*information*/
+
+#Information:hover > .subtitles::before{
+    visibility: visible;
+    width: 100%;
+}
+
+/*footer*/
+
+footer{
+    background-color: #092834;
+}
+
+footer a{
+    color: #F0F7D4;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer a:hover{
+    color: #B2D732;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer p{
+    color: #F0F7D4;
+}
+
+.fa{
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 36px;
+    color: #F0F7D4;
+}
+
+.fa:hover{
+    color: #B2D732;
+}
+
+/*Register*/
+section{
+    background-color: #F0F7D4;
+}
+
+.blue-button-black{
+    background-color: #66B032;
+    border-color: #66B032;
+}
+
+.blue-button-black:hover{
+    background-color: #347B98;
+    color: white;
+    border-color: #347B98;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
 }
