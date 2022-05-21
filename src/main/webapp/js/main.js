@@ -32,7 +32,7 @@ $(document).ready(function() {
         }
 
         if($('.navbar3').length){
-            if(($(this).scrollTop()) > altura && (estado !== 5)){
+            if(($(this).scrollTop()) > altura && (estado !== 5) && $(this).scrollTop() > 40){
                 fadeOutNavBar3();
                 estado = 5;
             }else if(($(this).scrollTop()) < altura && (estado !==6)){

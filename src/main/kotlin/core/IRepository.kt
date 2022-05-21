@@ -1,7 +1,9 @@
 package core
 
+import objects.user
+
 interface IRepository {
 
-    fun save();
+    fun saveUser(user: user);
 
 }

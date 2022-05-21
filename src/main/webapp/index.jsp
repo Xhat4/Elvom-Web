@@ -61,10 +61,14 @@
                 <div id="videoOverlay" class="overlay"></div>
 
                 <!-- The HTML5 video element that will create the background video on the header -->
-                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="https://firebasestorage.googleapis.com/v0/b/elvom-web.appspot.com/o/fondo.mp4?alt=media&token=9226d75e-b426-49f0-bc2b-f74c40032cf0" type="video/mp4">
-                    <!--<source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">-->
-                </video>
+                <div class="d-sm-none d-md-block">
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="https://firebasestorage.googleapis.com/v0/b/elvom-web.appspot.com/o/fondo.mp4?alt=media&token=9226d75e-b426-49f0-bc2b-f74c40032cf0" type="video/mp4">
+                    </video >
+                </div>
+                <div class="d-none d-sm-block d-md-none">
+                    <img src="./images/Images.png">
+                </div>
 
                 <!-- The header content -->
                 <div class="container h-100" id="measureHead">
@@ -129,7 +133,7 @@
                 <div class="ms-5 mt-5 row">
                     <div class="col-6 d-flex align-items-center">
                         <div class="px-5">
-                            <h4>Imágenes2</h4>
+                            <h4>Fotografía</h4>
                             <p class="mt-2">Desde Elvom pensamos que este formato es imprescindible. En el pasado existía sobre lienzos o papel, sin embargo, en
                                 la actualidad es fácil encontrarlo en formato digital manteniendo sus principales estilos (óleos, vectorial, abstracto, realista, etc).</p>
                         </div>
@@ -144,7 +148,7 @@
                     </div>
                     <div class="col-6 d-flex align-items-center">
                         <div class="px-5">
-                            <h4>Vídeos2</h4>
+                            <h4>Música</h4>
                             <p class="mt-2">Si una imagen debe de ser considerada arte, ¿por qué no un conjunto de ellas?.
                                 Los vídeos pueden transmitir los mismos sentimientos que las imágenes solo que con la particularidad de que dichos sentimientos
                                 pueden cambiar con el paso de la visualización del mismo, algo que con las imágenes es algo muy difícil de conseguir</p>
