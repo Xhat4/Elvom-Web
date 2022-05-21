@@ -8,18 +8,10 @@
         <servlet-name>registerServlet</servlet-name>
         <servlet-class>Controllers.registerServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>servlet</servlet-name>
-        <servlet-class>Controllers.Servlet</servlet-class>
-    </servlet>
 
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>servlet</servlet-name>
-        <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
     <session-config>

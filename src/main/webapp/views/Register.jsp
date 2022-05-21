@@ -59,46 +59,46 @@
     <div class="d-flex justify-content-center">
         <div class="d-block">
             <p class="h1 text-center">Registro</p>
-            <form class="mx-1 py-3" action="../servlet">
+            <form class="mx-1 py-3" action="../registerServlet" method="post">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="name" placeholder="name" required/>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="name" required/>
                         <label for="name">Nombre</label>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="surnames" placeholder="surnames" required/>
+                        <input type="text" class="form-control" name="surnames" id="surnames" placeholder="surnames" required/>
                         <label for="surnames">Apellidos</label>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="usernamein" placeholder="usernamein" required/>
+                        <input type="text" class="form-control" name="usernamein" id="usernamein" placeholder="usernamein" required/>
                         <label for="usernamein">Nombre de usuario</label>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-address-card"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="dni" placeholder="dni" required/>
+                        <input type="text" class="form-control" name="dni" id="dni" placeholder="dni" required/>
                         <label for="dni">DNI</label>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="email" class="form-control" id="email" placeholder="email" required/>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email" required/>
                         <label for="email"> E-mail</label>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="password" class="form-control" id="passwordin" placeholder="passwordin" required/>
+                        <input type="password" class="form-control" name="passwordin" id="passwordin" placeholder="passwordin" required/>
                         <label for="passwordin"> Contraseña</label>
                     </div>
                 </div>

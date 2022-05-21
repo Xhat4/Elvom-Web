@@ -2,8 +2,8 @@ package Controllers
 
 import core.IRepository
 import objects.user
-import javax.servlet.http.*
-import javax.servlet.annotation.*
+import jakarta.servlet.annotation.WebServlet
+import jakarta.servlet.http.*
 
 @WebServlet(name = "helloServlet", value = ["/hello-servlet"])
 class HelloServlet : HttpServlet() {
