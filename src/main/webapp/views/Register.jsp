@@ -59,7 +59,7 @@
     <div class="d-flex justify-content-center">
         <div class="d-block">
             <p class="h1 text-center">Registro</p>
-            <form class="mx-1 py-3" action="../HelloServlet">
+            <form class="mx-1 py-3" action="../servlet">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                     <div class="form-floating flex-grow-1">
