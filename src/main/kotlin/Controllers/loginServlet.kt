@@ -4,13 +4,13 @@ import connection.PostgreSQLRepository
 import java.io.IOException;
 import jakarta.servlet.*;
 import objects.Sha2;
-import objects.user;
+import objects.userAuth;
 import core.IRepository;
 import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.*
 
 @WebServlet(name = "registerServlet", value = ["/registerServlet"])
-class registerServlet : HttpServlet() {
+class loginServlet : HttpServlet() {
 
     var sha2 : Sha2 = Sha2();
     var order : IRepository = PostgreSQLRepository();
@@ -21,15 +21,11 @@ class registerServlet : HttpServlet() {
 
     @Throws(ServletException::class, IOException::class)
     public override fun doPost(request: HttpServletRequest, response: HttpServletResponse) {
-        var name = request.getParameter("name");
-        var surnames = request.getParameter("surnames");
-        var nickname = request.getParameter("usernamein");
-        var dni = request.getParameter("dni");
-        var email = request.getParameter("email");
-        var password = sha2.main(request.getParameter("passwordin"));
+        var username = request.getParameter("username");
+        var password = sha2.main(request.getParameter("password"));
 
-        var newUser : user = user(0,name,surnames,nickname,dni,email,null,null,false,false,password);
+        var newUser : userAuth = userAuth(username,password);
 
-        order.saveUser(newUser);
+        order.loginUser(newUser);
     }
 }

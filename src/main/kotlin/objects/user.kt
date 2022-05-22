@@ -1,23 +1,21 @@
 package objects
 
+import java.util.Date
 import java.util.StringJoiner
 
-class user{
-    private lateinit var name : String;
-    private lateinit var surnames : String;
-    private lateinit var username : String;
-    private lateinit var dni : String;
-    private lateinit var email : String;
-    private var password : ByteArray? = null;
-
-    fun setUser(name:String, surnames:String, username:String, dni:String, email:String, password:ByteArray?){
-        this.name = name;
-        this.surnames = surnames;
-        this.username = username;
-        this.dni = dni;
-        this.email = email;
-        this.password = password;
-    }
+class user(
+    private var id: Int = 0,
+    private var name: String,
+    private var surnames: String,
+    private var username: String,
+    private var dni: String,
+    private var email: String,
+    private var image: String?,
+    private var birthDate: Date?,
+    private var artist: Boolean,
+    private var admin: Boolean,
+    private var password: ByteArray?
+) {
 
     fun getName(): String{
         return name;

@@ -28,11 +28,11 @@
             <div class="dropdown-menu rounded mt-3">
                 <form class="px-2 py-1">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="username" placeholder="username" required>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
                         <label for="username">Nombre de Usuario</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         <label for="password">Contraseña</label>
                     </div>
                     <!--<div class="mb-3">

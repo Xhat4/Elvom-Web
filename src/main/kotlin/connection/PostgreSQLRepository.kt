@@ -2,6 +2,7 @@ package connection
 
 import core.IRepository
 import objects.user
+import objects.userAuth
 import java.sql.DriverManager
 import java.sql.PreparedStatement
 
@@ -28,8 +29,32 @@ class PostgreSQLRepository : IRepository {
         query.execute();
     }
 
-    fun load(){
+    override fun loginUser(user: userAuth): user? {
+        var query : PreparedStatement = connection.prepareStatement("select * from users where username = ? and password = ?");
 
+        query.setString(1, user.username);
+        query.setBytes(2, user.password);
+        var result = query.execute();
+
+        if(query.resultSet.next()){
+            var userLoaded : user = user(
+                query.resultSet.getInt("id"),
+                query.resultSet.getString("username"),
+                query.resultSet.getString("name"),
+                query.resultSet.getString("surnames"),
+                query.resultSet.getString("dni"),
+                query.resultSet.getString("email"),
+                query.resultSet.getString("image"),
+                query.resultSet.getDate("birth_date"),
+                query.resultSet.getBoolean("artist"),
+                query.resultSet.getBoolean("admin"),
+                null
+            );
+
+            return userLoaded;
+        }else{
+            return null;
+        }
     }
 
 }
