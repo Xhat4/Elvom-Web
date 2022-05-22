@@ -8,12 +8,14 @@ import objects.userAuth;
 import core.IRepository;
 import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.*
+import objects.user
 
 @WebServlet(name = "registerServlet", value = ["/registerServlet"])
 class loginServlet : HttpServlet() {
 
-    var sha2 : Sha2 = Sha2();
-    var order : IRepository = PostgreSQLRepository();
+    private var sha2 : Sha2 = Sha2();
+    private var order : IRepository = PostgreSQLRepository();
+    private lateinit var session: HttpSession;
 
     @Throws(ServletException::class, IOException::class)
     public override fun doGet(request: HttpServletRequest, response: HttpServletResponse) {
@@ -26,6 +28,15 @@ class loginServlet : HttpServlet() {
 
         var newUser : userAuth = userAuth(username,password);
 
-        order.loginUser(newUser);
+        var user: user? = order.loginUser(newUser);
+
+        session = request.getSession(true);
+        if(user != null){
+            session.setAttribute("user",user);
+            response.sendRedirect("views/User.jsp");
+        }else{
+            session.setAttribute("ErrorRegister",1);
+            response.sendRedirect("index.jsp");
+        }
     }
 }

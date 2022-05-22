@@ -26,7 +26,7 @@
         <div>
             <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
             <div class="dropdown-menu rounded mt-3">
-                <form class="px-2 py-1">
+                <form class="px-2 py-1" action="../loginServlet" method="post">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
                         <label for="username">Nombre de Usuario</label>

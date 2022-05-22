@@ -1,7 +1,6 @@
 package objects
 
 import java.util.Date
-import java.util.StringJoiner
 
 class user(
     private var id: Int = 0,
@@ -16,6 +15,10 @@ class user(
     private var admin: Boolean,
     private var password: ByteArray?
 ) {
+
+    fun getId(): Int?{
+        return id;
+    }
 
     fun getName(): String{
         return name;
@@ -39,5 +42,13 @@ class user(
 
     fun getPassword(): ByteArray?{
         return password;
+    }
+
+    fun getArtist(): Boolean{
+        return artist;
+    }
+
+    fun getAdmin(): Boolean{
+        return admin;
     }
 }

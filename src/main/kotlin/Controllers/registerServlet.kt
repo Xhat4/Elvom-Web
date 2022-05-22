@@ -12,8 +12,8 @@ import jakarta.servlet.http.*
 @WebServlet(name = "registerServlet", value = ["/registerServlet"])
 class registerServlet : HttpServlet() {
 
-    var sha2 : Sha2 = Sha2();
-    var order : IRepository = PostgreSQLRepository();
+    private var sha2 : Sha2 = Sha2();
+    private var order : IRepository = PostgreSQLRepository();
 
     @Throws(ServletException::class, IOException::class)
     public override fun doGet(request: HttpServletRequest, response: HttpServletResponse) {
