@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="objects.user"%>
-<%@ page import="objects.userAuth" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +27,7 @@
         <div>
             <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
             <div class="dropdown-menu rounded mt-3">
-                <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Perfil</a>
+                <a class="text-center text-white text-decoration-none d-block" href="./Modify.jsp">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <%
                     user user = (user) session.getAttribute("user");
@@ -38,11 +37,14 @@
                 <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Subir</a>
                 <div class="dropdown-divider"></div>
 
-                    <% }else if(user.getAdmin() == true){ %>
+                    <% }
+                    if(user.getAdmin() == true){ %>
+
                 <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Peticiones</a>
                 <div class="dropdown-divider"></div>
+
                 <%}%>
-                <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Cerrar session</a>
+                <a class="text-center text-white text-decoration-none d-block" href="../logOut">Cerrar session</a>
             </div>
         </div>
     </div>
@@ -56,7 +58,7 @@
         <!-- The HTML5 video element that will create the background video on the header -->
         <div class="d-sm-none d-md-block">
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="https://firebasestorage.googleapis.com/v0/b/elvom-web.appspot.com/o/fondo.mp4?alt=media&token=9226d75e-b426-49f0-bc2b-f74c40032cf0" type="video/mp4">
+                <source src="https://imagenes.skdragons.com/Imagenes/ElvomBackground.mp4" type="video/mp4">
             </video >
         </div>
         <div class="d-none d-sm-block d-md-none">

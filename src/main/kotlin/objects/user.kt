@@ -40,6 +40,14 @@ class user(
         return email;
     }
 
+    fun getImage(): String?{
+        return image;
+    }
+
+    fun getBirthDate() :Date?{
+        return birthDate;
+    }
+
     fun getPassword(): ByteArray?{
         return password;
     }

@@ -39,9 +39,9 @@ class PostgreSQLRepository : IRepository {
         if(query.resultSet.next()){
             var userLoaded : user = user(
                 query.resultSet.getInt("id"),
-                query.resultSet.getString("username"),
                 query.resultSet.getString("name"),
                 query.resultSet.getString("surnames"),
+                query.resultSet.getString("username"),
                 query.resultSet.getString("dni"),
                 query.resultSet.getString("email"),
                 query.resultSet.getString("image"),
