@@ -8,6 +8,7 @@ import objects.user;
 import core.IRepository;
 import jakarta.servlet.annotation.WebServlet
 import jakarta.servlet.http.*
+import java.time.LocalDate
 
 @WebServlet(name = "registerServlet", value = ["/registerServlet"])
 class registerServlet : HttpServlet() {
@@ -23,13 +24,16 @@ class registerServlet : HttpServlet() {
     public override fun doPost(request: HttpServletRequest, response: HttpServletResponse) {
         var name = request.getParameter("name");
         var surnames = request.getParameter("surnames");
-        var nickname = request.getParameter("usernamein");
+        var nickname = request.getParameter("usernamein").lowercase();
         var dni = request.getParameter("dni");
         var email = request.getParameter("email");
+        var fbirth = LocalDate.parse(request.getParameter("fbirth"));
         var password = sha2.main(request.getParameter("passwordin"));
 
-        var newUser : user = user(0,name,surnames,nickname,dni,email,null,null,false,false,password);
+        var newUser : user = user(0,name,surnames,nickname,dni,email,"../Storage/profileAvatars/standardUser.png",fbirth,false,false,password);
 
         order.saveUser(newUser);
+
+        response.sendRedirect("index.jsp")
     }
 }

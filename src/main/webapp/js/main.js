@@ -3,6 +3,15 @@ $(document).ready(function() {
     var estado = 0;
     var pantalla = 0;
 
+    //preview avatar image profile
+    $('#image').on('change', function (){
+        const [file] = image.files;
+        if (file) {
+            avatar.src = URL.createObjectURL(file);
+        }
+    })
+
+    //navbar control 1
     $(window).on('load', function (){
 
         if($('.navbar2').length){
@@ -17,6 +26,7 @@ $(document).ready(function() {
         }
     });
 
+    //navbar control 2
     $(window).on('scroll', function() {
 
         if($('.navbar2').length){
@@ -45,6 +55,7 @@ $(document).ready(function() {
 
     });
 
+    //functions for navbar controls
     function switchToNonTransparentNavBar(){
         $('.navbar2').css('opacity','0');
         $('.navbar2').fadeTo(100,1);

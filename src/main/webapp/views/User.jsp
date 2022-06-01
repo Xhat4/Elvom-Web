@@ -22,25 +22,23 @@
         </a>
     </div>
     <div class="d-flex flex-nowrap">
-        <a class="nav-link text-white underline btn">Galería</a>
-        <a class="nav-link text-white underline btn">Artistas</a>
+        <a href="../getArtServlet" class="nav-link text-white underline btn">Galería</a>
+        <a href="../getArtistServlet" class="nav-link text-white underline btn">Artistas</a>
+        <% user user = (user) session.getAttribute("user"); %>
         <div>
-            <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+            <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= user.getUsername() %></a>
             <div class="dropdown-menu rounded mt-3">
                 <a class="text-center text-white text-decoration-none d-block" href="./Modify.jsp">Perfil</a>
                 <div class="dropdown-divider"></div>
-                <%
-                    user user = (user) session.getAttribute("user");
+                <% if(user.getArtist() == true){ %>
 
-                    if(user.getArtist() == true){ %>
-
-                <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Subir</a>
+                <a class="text-center text-white text-decoration-none d-block" href="../getTagsServlet">Subir</a>
                 <div class="dropdown-divider"></div>
 
                     <% }
                     if(user.getAdmin() == true){ %>
 
-                <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Peticiones</a>
+                <a class="text-center text-white text-decoration-none d-block" href="../getRequestServlet">Solicitudes</a>
                 <div class="dropdown-divider"></div>
 
                 <%}%>
@@ -158,7 +156,7 @@
             <div class="col-md-12 text-center">
                 <p class="menu">
                     <a href="#">Términos y condiciones</a>
-                    <a href="#">Únete</a>
+                    <a href="./RequestsForm.jsp">Únete</a>
                 </p>
                 <ul class="p-0">
                     <li>

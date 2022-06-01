@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="objects.user"%>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,35 +18,33 @@
 <!-- navbar -->
 <nav class="navbar3 w-100 fixed-top text-center navbarNonTransparent">
     <div class="logoNavbar">
-        <a href="../index.jsp">
+        <a href="./User.jsp">
             <img class="logoNavbarImg" src="../images/ElvomLogo.png"/>
         </a>
     </div>
     <div class="d-flex flex-nowrap">
         <a class="nav-link text-white underline btn">Galería</a>
         <a class="nav-link text-white underline btn">Artistas</a>
+        <%  user user = (user) session.getAttribute("user");
+        %>
         <div>
-            <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+            <a class="nav-link text-white underline btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= user.getUsername() %></a>
             <div class="dropdown-menu rounded mt-3">
-                <form class="px-2 py-1" action="../loginServlet" method="post">
-                    <a class="text-center text-white text-decoration-none d-block" href="./Modify.jsp">Perfil</a>
-                    <div class="dropdown-divider"></div>
-                    <%
-                    user user = (user) session.getAttribute("user");
+                <a class="text-center text-white text-decoration-none d-block" href="./Modify.jsp">Perfil</a>
+                <div class="dropdown-divider"></div>
+                    <% if(user.getArtist() == true){ %>
 
-                    if(user.getArtist() == true){ %>
+                <a class="text-center text-white text-decoration-none d-block" href="../getTagsServlet">Subir</a>
+                <div class="dropdown-divider"></div>
 
-                    <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Subir</a>
-                    <div class="dropdown-divider"></div>
+                    <% }
+                if(user.getAdmin() == true){ %>
 
-                        <% }
-                    if(user.getAdmin() == true){ %>
+                <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Solicitudes</a>
+                <div class="dropdown-divider"></div>
 
-                    <a class="text-center text-white text-decoration-none d-block" href="./Register.jsp">Peticiones</a>
-                    <div class="dropdown-divider"></div>
-
-                        <%}%>
-                    <a class="text-center text-white text-decoration-none d-block" href="../logOut">Cerrar session</a>
+                    <%}%>
+                <a class="text-center text-white text-decoration-none d-block" href="../logOut">Cerrar session</a>
             </div>
         </div>
     </div>
@@ -55,7 +54,12 @@
     <div class="d-flex justify-content-center">
         <div class="d-block">
             <p class="h1 text-center">Perfil</p>
-            <form class="mx-1 py-3" action="../registerServlet" method="post">
+            <form class="px-2 py-1" action="../modifyServlet" method="post" enctype="multipart/form-data">
+                <div class="mb-3 mt-3 d-block justify-content-center">
+                            <img id="avatar" src="<%= user.getImage()%>" class="rounded-circle shadow-4" style="width: 150px; height: 150px;" alt="Avatar" />
+                    <input type="file" class="form-control" name="image" id="image" style="display: none" value="<%= user.getEmail()%>"/>
+                    <input type="button" class="btn btn-secondary" value="Seleccionar imagen" onclick="document.getElementById('image').click();" />
+                </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                     <div class="form-floating flex-grow-1">
@@ -92,13 +96,6 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
-                    <div class="form-floating flex-grow-1">
-                        <input type="file" class="form-control" name="image" id="image" placeholder="image" value="<%= user.getEmail()%>"/>
-                        <label for="image"> Imagen</label>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
                     <div class="form-floating flex-grow-1">
                         <input type="date" class="form-control" name="fbirth" id="fbirth" placeholder="fbirth" value="<%= user.getBirthDate()%>" required/>
@@ -108,7 +105,7 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                     <div class="form-floating flex-grow-1">
-                        <input type="password" class="form-control" name="passwordin" id="passwordin" placeholder="passwordin" required/>
+                        <input type="password" class="form-control" name="passwordin" id="passwordin" placeholder="passwordin"/>
                         <label for="passwordin"> Contraseña</label>
                     </div>
                 </div>

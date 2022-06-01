@@ -1,22 +1,23 @@
 package objects
 
+import java.time.LocalDate
 import java.util.Date
 
 class user(
-    private var id: Int = 0,
+    private var id: Int,
     private var name: String,
     private var surnames: String,
     private var username: String,
     private var dni: String,
     private var email: String,
     private var image: String?,
-    private var birthDate: Date?,
+    private var birthDate: LocalDate,
     private var artist: Boolean,
     private var admin: Boolean,
     private var password: ByteArray?
 ) {
 
-    fun getId(): Int?{
+    fun getId(): Int{
         return id;
     }
 
@@ -44,7 +45,7 @@ class user(
         return image;
     }
 
-    fun getBirthDate() :Date?{
+    fun getBirthDate() :LocalDate?{
         return birthDate;
     }
 
@@ -58,5 +59,9 @@ class user(
 
     fun getAdmin(): Boolean{
         return admin;
+    }
+
+    fun setImage(image: String){
+        this.image = image;
     }
 }

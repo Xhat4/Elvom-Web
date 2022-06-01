@@ -96,6 +96,13 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                    <div class="form-floating flex-grow-1">
+                        <input type="date" class="form-control" name="fbirth" id="fbirth" placeholder="fbirth" required/>
+                        <label for="fbirth"> Fecha de Nacimiento</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
                     <div class="form-floating flex-grow-1">
                         <input type="password" class="form-control" name="passwordin" id="passwordin" placeholder="passwordin" required/>

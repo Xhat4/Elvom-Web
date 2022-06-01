@@ -16,6 +16,34 @@
         <servlet-name>logOut</servlet-name>
         <servlet-class>Controllers.logOutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>modifyServlet</servlet-name>
+        <servlet-class>Controllers.modifyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getTagsServlet</servlet-name>
+        <servlet-class>Controllers.getTagsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sendRequestServlet</servlet-name>
+        <servlet-class>Controllers.sendRequestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>uploadArtServlet</servlet-name>
+        <servlet-class>Controllers.uploadArtServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getArtistServlet</servlet-name>
+        <servlet-class>Controllers.getArtistServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getArtServlet</servlet-name>
+        <servlet-class>Controllers.getArtServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getRequestServlet</servlet-name>
+        <servlet-class>Controllers.getRequestServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
@@ -28,6 +56,34 @@
     <servlet-mapping>
         <servlet-name>logOut</servlet-name>
         <url-pattern>/logOut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modifyServlet</servlet-name>
+        <url-pattern>/modifyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getTagsServlet</servlet-name>
+        <url-pattern>/getTagsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sendRequestServlet</servlet-name>
+        <url-pattern>/sendRequestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>uploadArtServlet</servlet-name>
+        <url-pattern>/uploadArtServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getArtistServlet</servlet-name>
+        <url-pattern>/getArtistServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getArtServlet</servlet-name>
+        <url-pattern>/getArtServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getRequestServlet</servlet-name>
+        <url-pattern>/getRequestServlet</url-pattern>
     </servlet-mapping>
 
     <session-config>
